@@ -34,7 +34,14 @@ My resume :)
 
 
 
-##further
+
+## further
 banana to single page app hi hai, eventually 
     - [ ]structure
     - [ ] design
+
+## functional requirements
+
+- responsive size
+
+- light and dark mode toggle
