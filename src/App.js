@@ -2,8 +2,8 @@
 
 function App() {
   return (
-    <div>
-      <h1 className='text-6xl'>Hi</h1>
+    <div className="bg-blue-500">
+      <h1>Hi</h1>
     </div>
   );
 }
