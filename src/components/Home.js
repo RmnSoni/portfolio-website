@@ -47,12 +47,11 @@ function Home() {
         </ul>
       </div>
 
-
-      <div className='flex p-20 justify-center  '>
-        < FaLinkedin className='flex-1'/>
-        <FaGithub className='flex-1' />
-        < HiDocumentArrowDown className='flex-1'/>
-        < FaEnvelope className='flex-1'/>
+      <div className='flex text-3xl p-20 justify-center  '>
+        <a target='_blank' className='m-2 hover:text-teal-600 flex-1' href='https://www.linkedin.com/in/rmnsoni/'><FaLinkedin /></a>
+        <a target='_blank' className='m-2 hover:text-teal-600 flex-1' href='https://github.com/RmnSoni' ><FaGithub/></a>
+        <a className='m-2 hover:text-teal-600 flex-1' href='mailto:soni.raman.1602@gmail.com' >< FaEnvelope/></a>
+        <a className='m-2 hover:text-teal-600 flex-1' href='../asset/RamanSoni_resumesde.pdf'download='placeholderResume.pdf' >< HiDocumentArrowDown/></a>
       </div>
     </div>
 
