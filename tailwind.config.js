@@ -6,7 +6,11 @@ module.exports = {
   'hover:opacity-100',
   'lg:text-right',],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'nunito': ['Nunito', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 

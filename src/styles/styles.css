@@ -1,0 +1,10 @@
+.cursor-gradient {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    mix-blend-mode: screen;
+  }
