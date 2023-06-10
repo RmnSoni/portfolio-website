@@ -5,10 +5,10 @@ export default class Work extends Component {
         return (
             <div className='py-4'>
                 <h2 className='sm:hidden text-2xl ' > Work Experience</h2>
-                <div className='flex' >
+                <div className='flex group' >
                     <div className='text-slate-400 min-w-fit m-1 p-1'> Aug - Dec 2022</div>
                     <div className='m-1 p-1' >
-                        <h3 className='text-teal-500 text-xl' >Management Trainee</h3>
+                        <h3 className='text-teal-500 text-xl group-hover:font-semibold' >Management Trainee</h3>
                         <a className=" hover:text-teal-500" rel="noreferrer" href='https://www.icicibank.com/' target='_blank'> ICICI Bank Ltd.</a>
                         <ul className=''>
                             <li> Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>

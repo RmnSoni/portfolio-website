@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.scrollable::-webkit-scrollbar {
+    width: 0.1em;
+  }  
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+.cursor-gradient {
+    position: fixed;
+    pointer-events: none;
+    transform-origin: bottom right;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    color: aqua;
+    mix-blend-mode: screen;
+  }
