@@ -14,12 +14,12 @@ const skills = [
 
 function Skills() {
 
-    const arrayCourseItems = courses.map((course) =>
-        <div className='m-1 inline-block hover:bg-slate-700
+    const arrayCourseItems = courses.map((course,index1) =>
+        <div key={index1} className='m-1 inline-block hover:bg-slate-700
          border-teal-700 border-2 rounded-full p-1  hover:text-teal-400 '>
             {course}</div>)
-    const arraySkillItems = skills.map((skill) =>
-        <div className='m-1 inline-block hover:bg-slate-700 
+    const arraySkillItems = skills.map((skill,index2) =>
+        <div key={index2} className='m-1 inline-block hover:bg-slate-700 
     border-teal-700 border-2 rounded-full p-1  hover:text-teal-400 '>
             {skill}</div>)
 
