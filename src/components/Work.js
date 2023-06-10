@@ -4,7 +4,7 @@ export default class Work extends Component {
     render() {
         return (
             <div className='py-4'>
-                <h2 className='sm:hidden text-xl ' > Work Experience</h2>
+                <h2 className='sm:hidden text-2xl ' > Work Experience</h2>
                 <div >
                     <div className='flex '>
                         <span className='flex-1'><h3>Management Trainee</h3></span>
