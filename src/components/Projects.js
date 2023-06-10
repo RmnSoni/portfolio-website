@@ -6,7 +6,7 @@ import React, { Component } from 'react'
   title:"placeholder project",
   description: "yaha pe peroject ak description liklhna hai bohot saara",
   description2: "incase kuch second para me likhna ho",
-  technologies: ["tech 1", 'tech2','tech3'],
+  technologies: [{id:1,tech:"tech 1"}, {id:2, tech:'tech2'},{ id:3, tech:'tech3'}],
   demolink:'',
   githublink:'',  
 } */
@@ -16,7 +16,7 @@ const projectsArray = [
     title: "1st title",
     description: "yaha pe peroject ak descri[ption liklhna hai bohot saara",
     description2: "incase kuch second para me likhna ho",
-    technologies: ["tech 1", 'tech 2', 'tech 3'],
+    technologies: [{id:1,tech:"tech 1"}, {id:2, tech:'tech2'},{ id:3, tech:'tech3'}],
     demolink: 'https://www.google.com',
     githublink: 'https://github.com',
   },
@@ -25,7 +25,7 @@ const projectsArray = [
     title: "2o title",
     description: " iska second para khali hai",
     description2: "",
-    technologies: ["tech 4", 'tech 5', 'tech5'],
+    technologies:[{id:1,tech:"tech 1"}, {id:2, tech:'tech2'},{ id:3, tech:'tech3'}],
     demolink: 'https://www.google.com',
     githublink: 'https://github.com',
   },
@@ -34,7 +34,7 @@ const projectsArray = [
     title: "no title",
     description: "yaha pe peroject ak descri[ption liklhna hai bohot saara",
     description2: "incase kuch second para me likhna ho",
-    technologies: ["tech 4", 'tech 5', 'tech5'],
+    technologies: [{id:1,tech:"tech 1"}, {id:2, tech:'tech2'},{ id:3, tech:'tech3'}],
     demolink: 'https://www.google.com',
     githublink: 'https://github.com',
   }
@@ -49,7 +49,7 @@ export default class Projects extends Component {
             <h3 className="text-xl group-hover:font-semibold text-teal-500" > {projectelement.title} </h3>
             <p>{projectelement.description}</p>
             <p>{projectelement.description2}</p>
-            <ul>{projectelement.technologies.map((item) => <span className='m-1 inline-block hover:bg-slate-700 border-teal-700 border-2 rounded-full p-1 hover:text-teal-400' >{item}</span>)}</ul>
+            <ul>{projectelement.technologies.map((item) => <span key={item.id} className='m-1 inline-block hover:bg-slate-700 border-teal-700 border-2 rounded-full p-1 hover:text-teal-400' >{item.tech}</span>)}</ul>
             <a target='_blank' rel='noreferrer' href={projectelement.demolink} >See Demo</a>
             <a target='_blank' rel='noreferrer' href={projectelement.githublink}>Github Repository</a>
           </div>
