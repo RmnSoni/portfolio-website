@@ -26,15 +26,15 @@ function App() {
 
   return (
       <div className=" h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden 
-    text-lg bg-slate-900  font-nunito   p-4 sm:p-0  text-slate-300 sm:flex">
+    sm:text-lg bg-slate-900  font-nunito    text-slate-300 sm:flex">
         
         
         <div className="cursor-gradient">  </div>
         
         
-        <header className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 sm:p-10 "> <Home /> </header>
+        <header className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-10 "> <Home /> </header>
 
-        <div className="sm:flex-auto w-full scrollable overflow-y-auto sm:w-1/2 sm:p-10">
+        <div className="sm:flex-auto w-full scrollable overflow-y-auto sm:w-1/2 p-4 sm:p-10">
           <main>
             <About />
             <Work />
