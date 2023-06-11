@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.cf02dc88.css",
-    "main.js": "/portfolio-website/static/js/main.5d51a48c.js",
+    "main.css": "/portfolio-website/static/css/main.c9ac207c.css",
+    "main.js": "/portfolio-website/static/js/main.09a24a1e.js",
     "static/media/RamanSoni_resumesde.pdf": "/portfolio-website/static/media/RamanSoni_resumesde.11f9aa521b3f136cdb34.pdf",
     "index.html": "/portfolio-website/index.html",
-    "main.cf02dc88.css.map": "/portfolio-website/static/css/main.cf02dc88.css.map",
-    "main.5d51a48c.js.map": "/portfolio-website/static/js/main.5d51a48c.js.map"
+    "main.c9ac207c.css.map": "/portfolio-website/static/css/main.c9ac207c.css.map",
+    "main.09a24a1e.js.map": "/portfolio-website/static/js/main.09a24a1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf02dc88.css",
-    "static/js/main.5d51a48c.js"
+    "static/css/main.c9ac207c.css",
+    "static/js/main.09a24a1e.js"
   ]
 }
