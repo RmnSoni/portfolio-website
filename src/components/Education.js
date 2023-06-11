@@ -15,8 +15,10 @@ function Education() {
      border-teal-700 border-2 rounded-full p-1  hover:text-teal-500 '>
             {course}</div>)
     return (
-        <div><h2>Education</h2>
+        <div className='group/section'>
             {/* One Item in Education, copy this and make new when more*/}
+            <section className=''>
+                <h3 className='text-2xl group-hover/section:text-teal-500 ' > Education</h3>
             <div className='flex group'>
                 <div className='flex-none p-1 m-1 text-slate-500'>2018-2022</div>
                 <div className='flex-1 m-1 p-1'>
@@ -27,9 +29,11 @@ function Education() {
                     <p>Indian Institute of Technology, Mandi </p>
                 </div>
             </div>
-
-            <h2>Course Work</h2>
+            </section>
+            <section className=''  >
+            <div className='text-2xl pt-1  group-hover/section:text-teal-500   '> Coursework </div>
             <ul className='py-1'>{arrayCourseItems}</ul>
+            </section>            
             <br /></div>
     )
 }

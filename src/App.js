@@ -13,7 +13,7 @@ function App() {
       const cursor = document.querySelector('.cursor-gradient');
       const x = event.clientX;
       const y = event.clientY;
-      cursor.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(45,212,192,0.10), rgba(0, 0, 0, 0) 30% )`;
+      cursor.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(45,212,192,0.10), rgba(0, 0, 0, 0) 50% )`;
     };
 
     document.addEventListener('mousemove', handleMouseMove);
@@ -25,7 +25,7 @@ function App() {
 
 
   return (
-      <div className=" cursor-none h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden 
+      <div className=" h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden 
     text-lg bg-slate-900  font-nunito   p-4 sm:p-0  text-slate-300 sm:flex">
         
         

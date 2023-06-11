@@ -14,12 +14,9 @@ function Skills() {
             {skill}</div>)
 
     return (
-        <div>
-            <div className='text-2xl sticky top-0 sm:hidden '> Education and Skills </div>
-
-
-            <br />
-            <h2>Skills</h2>
+        <div className='group'>
+ 
+            <h2 className='py-1 text-2xl group-hover:text-teal-500  '>Skills</h2>
             <ul className='py-1'>{arraySkillItems}</ul>
 
             <br />

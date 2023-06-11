@@ -43,7 +43,8 @@ const projectsArray = [
 export default class Projects extends Component {
   render() {
     return (
-      <div className='py-4'>Projects
+      <div className='py-4 group/section'>
+        <h2 className='text-2xl group-hover/section:text-teal-500' >Projects</h2>
         {projectsArray.map((projectelement) => (
           <div key={projectelement.id} className='group m-1 p-1 hover:border-slate-700 border rounded-xl border-slate-900 '>
             <h3 className="text-xl group-hover:font-semibold text-teal-500" > {projectelement.title} </h3>
