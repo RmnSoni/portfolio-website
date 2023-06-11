@@ -34,7 +34,7 @@ function App() {
         
         <header className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-10 "> <Home /> </header>
 
-        <div className="sm:flex-auto w-full scrollable overflow-y-auto sm:w-1/2 p-4 sm:p-10">
+        <div className="sm:flex-auto w-full scrollable overflow-y-auto sm:w-1/2 mb-10 sm:m-0 p-4 sm:p-10">
           <main>
             <About />
             <Work />
