@@ -14,7 +14,7 @@ export default class Contact extends Component {
         <p className='m-1 p-1 group' >
           <a rel="noreferrer" target='_blank' href='https://www.linkedin.com/in/rmnsoni/'>
           <FaLinkedin className='inline mx-1 group-hover:text-teal-500' />
-          Connect with me on my LinkedIn profile:<span className="group-hover:text-teal-500 group-hover:font-semibold"> /rmnsoni</span></a></p>
+          Connect with me on my LinkedIn profile <span className="group-hover:text-teal-500 group-hover:font-semibold"> rmnsoni</span></a></p>
 
         <p className='m-1 p-1 group' >
           <a rel="noreferrer"  href='mailto:soni.raman.1602@gmail.com'  >
@@ -22,7 +22,7 @@ export default class Contact extends Component {
 
         <p className='m-1 p-1 group'>
           <a target='_blank' rel='noreferrer' href='https://www.instagram.com/i.aint.artist/' >
-            <FaInstagram className='inline mx-1  group-hover:text-teal-500' />Although <span className="group-hover:text-teal-500 group-hover:font-semibold" >@i.aint.arist</span> you can see my art on instagram.</a></p>
+            <FaInstagram className='inline mx-1  group-hover:text-teal-500' />Although <span className="group-hover:text-teal-500 group-hover:font-semibold" >@i.aint.arist</span>, you can see my art on instagram.</a></p>
 
         <p className='m-1 p-1 group' >
           <a rel="noreferrer"  href={Resume} download='placeholderResume.pdf' >

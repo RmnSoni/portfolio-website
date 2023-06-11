@@ -1,9 +1,20 @@
-import React from 'react'
+import { gsap } from 'gsap'
+import React, { useEffect } from 'react'
+import { useRef } from 'react'
 
-export default function About() {
+
+function About() {
+  
+  let aboutRef = useRef(null)
+  useEffect(()=>{
+    console.log("hila diya")
+    gsap.fromTo(aboutRef,{x:100}, {x:0})
+  
+  },[])
+
   return (
 
-    <div  className='py-4 group'>
+    <div  ref={el=>{aboutRef = el}} className='py-4 group'>
 
     <h2 className='sm:hidden text-2xl group-hover:text-teal-500 ' > About Me</h2>
     <p className='my-1'>As B.Tech graduate form IIT Mandi transitioning from being a management trainee into the world of software engineering, I bring a unique blend of skills and a deep passion for music.</p>
@@ -12,3 +23,4 @@ export default function About() {
     </div>
   )
 }
+export default About ;

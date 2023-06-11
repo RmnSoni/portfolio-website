@@ -5,6 +5,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiDocumentArrowDown } from 'react-icons/hi2';
 
 
+
 function Home() {
 
   const aboutRef = useRef(null);
@@ -20,7 +21,7 @@ function Home() {
 
 
   return (
-
+  
     <div className=''>
 
       <h1 className='text-6xl' >Raman Soni</h1>

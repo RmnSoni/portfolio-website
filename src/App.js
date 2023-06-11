@@ -5,9 +5,14 @@ import Work from "./components/Work";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+
 
 function App() {
+
+
+  // hover effect
   useEffect(() => {
     const handleMouseMove = (event) => {
       const cursor = document.querySelector('.cursor-gradient');
@@ -25,38 +30,29 @@ function App() {
 
 
   return (
-      <div className=" h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden 
-    sm:text-lg bg-slate-900  font-nunito    text-slate-300 sm:flex">
-        
-        
-        <div className="cursor-gradient">  </div>
-        
-        
-        <header className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-10 "> <Home /> </header>
+    <div className=" h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden sm:text-lg bg-slate-900  font-nunito    text-slate-300 sm:flex">
 
-        <div className="sm:flex-auto w-full scrollable overflow-y-auto sm:w-1/2 mb-10 sm:m-0 p-4 sm:p-10">
-          <main>
-            <About />
-            <Work />
-            <Skills />
-            <Education />
-            <Projects />
-          </main>
-          <footer>
-            <Contact />
-          </footer>
-        </div>
+      <div className="cursor-gradient"></div>
+      <header className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-10 "> <Home /> </header>
 
-        <div className="text-sm text-slate-500">
-          {/* This website's theme is loosely derived from <a className=" hover:text-teal-400 " href="https://v4.brittanychiang.com/" target="_blank" > Britanny Chang </a> and made in Visual Studio Code using React and TailwindCSS */}
-        </div>
-        <div className="cursor-gradient"></div>
-        <div></div>
+      <div className="sm:flex-auto w-full scrollable overflow-y-auto sm:w-1/2 mb-10 sm:m-0 p-4 sm:p-10">
+        <main>
+          <About />
+          <Work />
+          <Skills />
+          <Education />
+          <Projects />
+        </main>
+        <footer>
+          <Contact />
+          <div className="text-sm group text-slate-500">
+            This website's is hosted on <span className="group-hover:text-teal-500">GitHub Pages</span> and made in <span className="group-hover:text-teal-500">Visual Studio Code</span> using <span className="group-hover:text-teal-500"> ReactJS</span> and <span className="group-hover:text-teal-500">TailwindCSS</span>.
+          </div>
+        </footer>
       </div>
+      <div></div>
+    </div>
   );
 }
-
-
-
 
 export default App;
