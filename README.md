@@ -1,47 +1,23 @@
 # portfolio-website
 My resume :)
 
-## Major Pages
+## Major Parts
 
-- [ ] Landing Page
-    - [ ] structure
-    - [ ] content 
-    - [ ] design
-- [ ] About
-    - [ ] structure
-    - [ ] content 
-    - [ ] design
-- [ ] work exp
-    - [ ] structure
-    - [ ] content 
-    - [ ] design
-- [ ] Skills
-    - [ ] structure
-    - [ ] content 
-    - [ ] design
-- [ ] Projects
-    - [ ] structure
-    - [ ] content 
-    - [ ] design
+- [x] About
+- [x] work exp
+- [x] Skills
+- [x] Education
+- [x] Projects
+    - [ ] Content
+- [x] Contact
+    - [ ] LinkedIn sudhaaro
 - [ ] Achievements
-    - [ ] structure
-    - [ ] content 
-    - [ ] design
-- [ ] Contact
-    - [ ] structure
-    - [ ] content 
-    - [ ] design
-
-
 
 
 ## further
-banana to single page app hi hai, eventually 
-    - [ ]structure
-    - [ ] design
 
-## functional requirements
-
-- responsive size
-
-- light and dark mode toggle
+- [ ] Make sidebar icons highligh when their corresponding content is on top.
+- [ ] Make a loading animation on start
+- [ ] Maybe light and dark mode toggle
+    - [ ] Decide a Theme
+    - [ ] Implementation
