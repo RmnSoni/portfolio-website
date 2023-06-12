@@ -16,7 +16,7 @@ function Education() {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.5,
+            threshold: 0.0,
         };
         const observerCallback = (entries) => {
             entries.forEach((entry) => {
