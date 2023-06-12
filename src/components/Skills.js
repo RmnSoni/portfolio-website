@@ -1,5 +1,6 @@
 import { gsap } from 'gsap'
-import React, { useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
+import RefContext from '../context/RefContext';
 
 
 
@@ -13,9 +14,14 @@ const skills = [
 ]
 
 function Skills() {
-    let skillRef = useRef(null);
-
+    const{ skillsRef } = useContext(RefContext);
     const listRef = useRef([]);
+
+
+
+
+
+
 
     useEffect(() => {
 
@@ -38,15 +44,13 @@ function Skills() {
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-        listRef.current.forEach((item) => {
-            observer.observe(item);
-        });
+        observer.observe(skillsRef.current)
 
         return () => {
             observer.disconnect();
         };
         ;
-    }, []);
+    },);
 
 
     const arraySkillItems = skills.map((skill, index) => {
@@ -56,7 +60,7 @@ function Skills() {
     })
 
     return (
-        <div className='group'>
+        <div className='group' ref={skillsRef}>
 
             <h2 className='py-1 text-2xl group-hover:text-teal-500  '>Skills</h2>
             <ul className='py-1'>{arraySkillItems}</ul>

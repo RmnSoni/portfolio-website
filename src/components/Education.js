@@ -1,5 +1,7 @@
 import gsap from 'gsap';
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef,useContext } from 'react'
+import RefContext from '../context/RefContext';
+
 
 
 
@@ -7,11 +9,11 @@ const courses = [
     "Data Structures and Alogirthms", "Operating Systems", "Computer Organisation", "Information and Database Systems", "Data Science I - Statistics", "Data Science II - Probablity", "Data Science III - Machine Learning", "Statistical Learning", "Data Handling and Visualization", "Special Topics in Deep Neural Networks",
 ];
 
-
 function Education() {
-
+    const { educationRef } = useContext(RefContext);
     const listRef = useRef([]);
     const sectionRef = useRef();
+
     useEffect(() => {
         const observerOptions = {
             root: null,
@@ -22,8 +24,8 @@ function Education() {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     gsap.fromTo(listRef.current,
-                        { opacity: 0, x: 10, },
-                        { x: 0, opacity: 1, stagger: 0.1, ease: "elastic.out(1,0.5)", duration: 0.5, }
+                        { opacity: 0, x: 30, },
+                        { x: 0, opacity: 1, stagger: 0.12, ease: "elastic.out(1,0.5)", duration: 0.5, }
                     );
                 }
             });
@@ -34,7 +36,6 @@ function Education() {
         return () => {
             observer.disconnect();
         };
-        ;
     }, []);
 
 
@@ -42,7 +43,7 @@ function Education() {
         <div key={index} ref={el => (listRef.current[index] = el)} className=' transform m-1 inline-block hover:bg-slate-700 border-teal-700 opacity-0 border-2 rounded-full p-1  hover:text-teal-500 '>{course}</div>)
 
     return (
-        <div className='group/section'>
+        <div className='group/section' ref= {educationRef}>
             {/* One Item in Education, copy this and make new when more*/}
             <section className=''>
                 <h3 className='text-2xl group-hover/section:text-teal-500 ' > Education</h3>

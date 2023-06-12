@@ -1,18 +1,15 @@
 
-import React, { useRef } from 'react';
+import React, { useContext } from 'react';
 import Resume from "../asset/RamanSoni_resumesde.pdf";
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiDocumentArrowDown } from 'react-icons/hi2';
+import RefContext from '../context/RefContext';
 
 
 
 function Home() {
 
-  const aboutRef = useRef(null);
-  const workRef = useRef(null);
-  const contactRef = useRef(null);
-  const helpRef = useRef(null);
-  const projectRef = useRef(null);
+  const { educationRef, workRef, skillsRef, contactRef, projectRef } = useContext(RefContext);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -27,21 +24,22 @@ function Home() {
       <p className='m-1' >Hey &#x1f44b;, I am open to work.</p>
 
       <div className='py-10 hidden sm:block '>
-        <ul>
+        <ul className='text-slate-400'>
           <li>
-            <button onClick={() => scrollToSection(aboutRef)}>About</button>
+            <button onClick={() => scrollToSection(workRef)}
+            className='hover:text-teal-500'>EXPERIENCE</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(helpRef)}>Skills</button>
+            <button className='hover:text-teal-500' onClick={() => scrollToSection(skillsRef)}>SKILLS</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(workRef)}>Work</button>
+            <button className='hover:text-teal-500' onClick={() => scrollToSection(educationRef)}>EDUCATION</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(projectRef)}>Projects</button>
+            <button onClick={() => scrollToSection(projectRef)}>PROJECTS</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(contactRef)}>Contact Me</button>
+            <button onClick={() => scrollToSection(contactRef)}>CONTACT ME</button>
           </li>
 
         </ul>

@@ -1,58 +1,16 @@
 import { gsap } from 'gsap';
 import React, { useEffect, useRef } from 'react'
+import { useContext } from 'react';
+import RefContext from '../context/RefContext';
+import { projectsArray } from './ProjectList';
 
-
-/*  Project template, add it in the array below
-{  
-  id:0,
-  title:"placeholder project",
-  description: "yaha pe peroject ak description liklhna hai bohot saara",
-  description2: "incase kuch second para me likhna ho",
-  technologies: ["tech 1",'tech2' ,'tech3'],
-  demolink:'',
-  githublink:'',  
-} */
-
-
-const projectsArray = [
-
-  {
-    title: "3 Band Audio Equalizer",
-
-    description: 
-    "Real-time VST equalizer plugin enhances live audio, reducing noise and boosting voices for meetings and games, perfect for improving quality in modest microphone setups. ",
-
-    description2: "Light weight UI with Spectrum Analyzer and Response Curve with simple noise reduction and voice enhancement made with modern C++ using  DSP from JUCE framework.",
-    technologies: ["C++ 17", 'JUCE'],
-    demolink: 'https://www.google.com/',
-    githublink: 'https://www.google.com/',
-  },
-
-  {
-
-    title: "1st title",
-    description: "yaha pe peroject liklhna hai bohot saara",
-    description2: "isme demo hai github nahi - test",
-    technologies: ["tech 1", 'tech2', 'tech3'],
-    demolink: 'https://www.google.com',
-    githublink: "",
-  },
-
-  {
-    title: "2nd title",
-    description: " iska second para khali hai",
-    description2: "",
-    technologies: ["tech 4", 'tech5', 'tech6'],
-    demolink: 'https://www.google.com',
-    githublink: 'https://github.com',
-  },
-];
 
 export default function Projects() {
 
-
+  const {projectRef} = useContext(RefContext);
   const listRef = useRef([]);
-  const sectionRef = useRef(null);
+  
+  
   useEffect(() => {
 
     const observerOptions = {
@@ -74,42 +32,42 @@ export default function Projects() {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    observer.observe(sectionRef.current)
+    observer.observe(projectRef.current)
 
     return () => {
       observer.disconnect();
     };
     ;
-  }, []);
+  }, );
 
 
-
+//----------------------------------------------------------------------------------
   return (
 
 
-    <div className='py-4 group/section' ref={sectionRef}>
-      
+    <div className='py-4 group/section' ref={projectRef}>
+
       <h2 className='text-2xl group-hover/section:text-teal-500'>Projects</h2>
       {projectsArray.map((projectelement, index) => (
-        
+
         <div key={index} ref={el => (listRef.current[index] = el)} className=' group opacity-0 m-1 p-1 hover:border-slate-700 border rounded-xl border-slate-900 '>
-        
+
           <h3 className="text-xl group-hover:font-semibold  text-teal-500" > {projectelement.title}  </h3>
-        
+
           <div className='flex justify-between transition duration-500'>
-        
-            <div>       <p>{projectelement.description}</p>
+
+            <div>
+              <p>{projectelement.description}</p>
               <p>{projectelement.description2}</p>
-        
               <ul>{projectelement.technologies.map((item, index2) => <span key={index2} className="m-1 inline-block 
           transition duration-500
-           group-hover:translate-x-1 hover:bg-slate-700 border-teal-700 border-2 rounded-full p-1 group-hover:text-slate-400" >{item}</span>)}</ul>
+           group-hover:translate-x-1 hover:bg-slate-700 border-teal-700 border-2 rounded-full p-1 hover:text-teal-400" >{item}</span>)}</ul>
             </div>
 
             <div className='text-center opacity-0 flex-col flex  group-hover:opacity-100 transition duration-500 '>
-              
+
               {projectelement.demolink ? <a target='_blank' rel='noreferrer' href={projectelement.demolink} className=" transition duration-500 group-hover:-translate-x-1 m-1 p-1 rounded-full font-semibold text-slate-400  border-teal-700 border-2  hover:bg-teal-600 hover:text-slate-800 hover:border-slate-700">
-                Demo</a > 
+                Demo</a >
                 : ""}
 
 
