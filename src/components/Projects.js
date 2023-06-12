@@ -53,8 +53,8 @@ export default function Projects() {
 
     const observerOptions = {
       root: null,
-      rootMargin: '10px',
-      threshold: 0.3,
+      rootMargin: '-5px',
+      threshold: 0.0,
 
     };
 
@@ -87,12 +87,12 @@ export default function Projects() {
     <div className='py-4 group/section' ref={sectionRef}>
       <h2 className='text-2xl group-hover/section:text-teal-500'>Projects</h2>
       {projectsArray.map((projectelement, index) => (
-        <div key={index} ref={el => (listRef.current[index] = el)} className='group m-1 p-1 hover:border-slate-700 border rounded-xl border-slate-900 '>
+        <div key={index} ref={el => (listRef.current[index] = el)} className='group opacity-0 m-1 p-1 hover:border-slate-700 border rounded-xl border-slate-900 '>
           <h3 className="text-xl group-hover:font-semibold  text-teal-500" > {projectelement.title} </h3>
           <p>{projectelement.description}</p>
           <p>{projectelement.description2}</p>
           <ul>{projectelement.technologies.map((item, index2) => <span key={index2} className="m-1 inline-block 
-          transition duration-1000
+          transition duration-500
            group-hover:translate-x-1 hover:bg-slate-700 border-teal-700 border-2 rounded-full p-1 hover:text-teal-400" >{item}</span>)}</ul>
           <a target='_blank' rel='noreferrer' href={projectelement.demolink} >See Demo</a>
           <a target='_blank' rel='noreferrer' href={projectelement.githublink}>Github Repository</a>
