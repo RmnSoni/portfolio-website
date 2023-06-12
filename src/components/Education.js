@@ -4,14 +4,14 @@ import React, { useEffect, useRef } from 'react'
 
 
 const courses = [
-    "Data Structures and Alogirthms", "Operating Systems", "Computer Organisation", "Information and Database Systems","Data Science I - Statistics", "Data Science II - Probablity", "Data Science III - Machine Learning","Statistical Learning", "Data Handling and Visualization", "Special Topics in Deep Neural Networks",
+    "Data Structures and Alogirthms", "Operating Systems", "Computer Organisation", "Information and Database Systems", "Data Science I - Statistics", "Data Science II - Probablity", "Data Science III - Machine Learning", "Statistical Learning", "Data Handling and Visualization", "Special Topics in Deep Neural Networks",
 ];
 
 
 function Education() {
 
     const listRef = useRef([]);
-
+    const sectionRef = useRef();
     useEffect(() => {
         const observerOptions = {
             root: null,
@@ -22,7 +22,7 @@ function Education() {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     gsap.fromTo(listRef.current,
-                        { opacity: 0, x: 30, },
+                        { opacity: 0, x: 10, },
                         { x: 0, opacity: 1, stagger: 0.1, ease: "elastic.out(1,0.5)", duration: 0.5, }
                     );
                 }
@@ -30,10 +30,7 @@ function Education() {
         };
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
-        listRef.current.forEach((item) => {
-            observer.observe(item);
-        });
-
+        observer.observe(sectionRef.current)
         return () => {
             observer.disconnect();
         };
@@ -60,12 +57,12 @@ function Education() {
                     </div>
                 </div>
             </section>
-            <section className=''  >
+            <section ref={sectionRef} className=''  >
                 <div className='text-2xl pt-1  group-hover/section:text-teal-500   '> Coursework </div>
                 <ul className='py-1'>{arrayCourseItems}</ul>
             </section>
             <br />
-            </div>
+        </div>
     )
 }
 

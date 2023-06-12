@@ -1,4 +1,4 @@
-import { Elastic, gsap } from 'gsap'
+import {  gsap } from 'gsap'
 import React, { useEffect } from 'react'
 import { useRef } from 'react'
 
@@ -7,16 +7,10 @@ import { useRef } from 'react'
 
 function About() {
   
-  let aboutRef = useRef(null)
-  useEffect(()=>{
-    console.log("hila diya")
-    gsap.fromTo(aboutRef,{x:100 , opacity:0 ,  }, {x:0,duration:1, opacity:1 ,ease:Elastic.easeOut } )
-  
-  },[])
 
   return (
 
-    <div  ref={el=>{aboutRef = el}} className='py-4 opacity-0 group'>
+    <div   className='py-4  group'>
 
     <h2 className='sm:hidden text-2xl  group-hover:text-teal-500 ' > About Me</h2>
     <p className='my-1'>As B.Tech graduate form IIT Mandi transitioning from being a management trainee into the world of software engineering, I bring a unique blend of skills and a deep passion for music.</p>
