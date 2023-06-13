@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import React, { useEffect, useRef,useContext } from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
 import RefContext from '../context/RefContext';
 
 
@@ -10,16 +10,19 @@ const courses = [
 ];
 
 function Education() {
+
     const { educationRef } = useContext(RefContext);
     const listRef = useRef([]);
     const sectionRef = useRef();
 
     useEffect(() => {
+
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.0,
+            threshold: 0.1,
         };
+
         const observerCallback = (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -33,6 +36,7 @@ function Education() {
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
         observer.observe(sectionRef.current)
+        
         return () => {
             observer.disconnect();
         };
@@ -43,7 +47,7 @@ function Education() {
         <div key={index} ref={el => (listRef.current[index] = el)} className=' transform m-1 inline-block hover:bg-slate-700 border-teal-700 opacity-0 border-2 rounded-full p-1  hover:text-teal-500 '>{course}</div>)
 
     return (
-        <div className='group/section' ref= {educationRef}>
+        <div className='group/section' ref={educationRef}>
             {/* One Item in Education, copy this and make new when more*/}
             <section className=''>
                 <h3 className='text-2xl group-hover/section:text-teal-500 ' > Education</h3>
@@ -58,13 +62,15 @@ function Education() {
                     </div>
                 </div>
             </section>
-            <section ref={sectionRef} className=''  >
+
+            <section>
                 <div className='text-2xl pt-1  group-hover/section:text-teal-500   '> Coursework </div>
-                <ul className='py-1'>{arrayCourseItems}</ul>
-            </section>
+                <section ref={sectionRef}>
+                    <ul className='py-1'>{arrayCourseItems}</ul>
+                </section></section>
             <br />
         </div>
     )
 }
 
-export default Education
+export default Education;

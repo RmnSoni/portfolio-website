@@ -5,10 +5,12 @@ import Work from "./components/Work";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
-import {  useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaArrowCircleUp } from "react-icons/fa";
+import RefContext from "./context/RefContext";
+
 
 
 
@@ -16,9 +18,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function App() {
-
+  const { aboutRef } = useContext(RefContext)
   const scrollContainerRef = useRef(null);
   const [showButton, setShowButton] = useState(false);
+
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current; // Create a local variable to hold the current ref value
@@ -41,12 +48,12 @@ function App() {
   }, []);
 
 
-  const handleScrollToTop = () => {
-    scrollContainerRef.current.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  // const handleScrollToTop = () => {
+  //   scrollContainerRef.current.scrollTo({
+  //     top: 0,
+  //     behavior: 'smooth',
+  //   });
+  // };
 
   // hover effect
   useEffect(() => {
@@ -89,12 +96,13 @@ function App() {
           </div>
         </footer>
 
-        {showButton && (
-          <button onClick={handleScrollToTop}
-            className=" transition-color duration-200 fixed bottom-4 right-4 p-2 text-3xl hover:text-teal-500 hover:text-4xl" ><FaArrowCircleUp />
-          </button>)}
+
 
       </div>
+      {showButton && (
+        <button onClick={() => scrollToSection(aboutRef)}
+          className=" transition-color duration-200 fixed bottom-4 right-4 p-2 text-3xl hover:text-teal-500 hover:text-4xl" ><FaArrowCircleUp />
+        </button>)}
     </div>
   );
 }

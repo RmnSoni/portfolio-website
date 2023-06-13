@@ -8,7 +8,7 @@ export default function Contact() {
 
   const {contactRef} = useContext(RefContext)
     return (
-    <div className='py-4 group/section' ref={contactRef} >
+    <section className='py-4 group/section' ref={contactRef} >
 
       <h2 className='group-hover/section:text-teal-500 text-2xl p-1 '>Contact Me</h2>
 
@@ -29,7 +29,7 @@ export default function Contact() {
         <a rel="noreferrer" href={Resume} download='placeholderResume.pdf' >
           <FaDownload className="mx-1 inline group-hover:text-teal-500" />
           You can download <span className="group-hover:text-teal-500 group-hover:font-semibold" > my resume </span> by clicking here. </a></p>
-    </div>
+    </section>
   )
 }
 
