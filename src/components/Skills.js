@@ -1,18 +1,11 @@
 import { gsap } from 'gsap'
 import React, { useContext, useEffect, useRef } from 'react'
 import RefContext from '../context/RefContext';
+import { skills } from '../asset/ListsAddables';
 
-const skills = [
-    "Python",
-    "C++",
-    "HTML/CSS",
-    "TailwindCSS",
-    "JavaScript",
-    "ReactJS",
-]
 
 function Skills() {
-    const{ skillsRef } = useContext(RefContext);
+    const { skillsRef } = useContext(RefContext);
     const listRef1 = useRef([]);
     const sectionRef = useRef();
 
@@ -25,9 +18,9 @@ function Skills() {
         };
 
         const observerCallback = (entries) => {
-            
+
             entries.forEach((entry) => {
-                
+
                 if (entry.isIntersecting) {
                     console.log("hila")
                     gsap.fromTo(listRef1.current,
@@ -45,8 +38,7 @@ function Skills() {
         return () => {
             observer.disconnect();
         };
-        ;
-    },[]);
+    }, []);
 
 
     const arraySkillItems = skills.map((skill, index) => {
@@ -60,7 +52,7 @@ function Skills() {
 
             <h2 className='py-1 text-2xl group-hover:text-teal-500  '>Skills</h2>
 
-            <ul className='py-1' ref={sectionRef}>{arraySkillItems}</ul>
+            <ul className='m-1' ref={sectionRef}>{arraySkillItems}</ul>
 
             <br />
 

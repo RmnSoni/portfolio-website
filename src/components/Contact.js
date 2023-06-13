@@ -26,7 +26,7 @@ export default function Contact() {
           <FaInstagram className='inline mx-1  group-hover:text-teal-500' />Although <span className="group-hover:text-teal-500 group-hover:font-semibold" >@i.aint.arist</span>, you can see my art on instagram.</a></p>
 
       <p className='m-1 p-1 group' >
-        <a rel="noreferrer" href={Resume} download='placeholderResume.pdf' >
+        <a rel="noreferrer" href={Resume} download='RamanSoniResume.pdf' >
           <FaDownload className="mx-1 inline group-hover:text-teal-500" />
           You can download <span className="group-hover:text-teal-500 group-hover:font-semibold" > my resume </span> by clicking here. </a></p>
     </section>

@@ -10,6 +10,8 @@ export const UserRefProvider = ({ children }) => {
     const contactRef = useRef(null);
     const projectRef = useRef(null);
     const aboutRef = useRef(null);
+
+    
   
 
     return (

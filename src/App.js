@@ -20,6 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const { aboutRef } = useContext(RefContext)
   const scrollContainerRef = useRef(null);
+  const headerRef = useRef(null);
   const [showButton, setShowButton] = useState(false);
 
   const scrollToSection = (ref) => {
@@ -47,6 +48,27 @@ function App() {
     };
   }, []);
 
+  useEffect(()=>{
+
+    const header=headerRef.current;
+    const baaki = scrollContainerRef.current;
+
+    gsap.fromTo(header,
+      {
+        opacity:0, x:-500
+      },{
+        x:0 , opacity:1, duration:0.5, ease:'power2.out'
+      });
+
+      gsap.fromTo(baaki,
+        {
+          opacity:0, x:500
+        },{
+          x:0 , opacity:1, duration:0.5, ease:'power2.out'
+        });
+
+  },[]);
+
 
   // const handleScrollToTop = () => {
   //   scrollContainerRef.current.scrollTo({
@@ -73,11 +95,11 @@ function App() {
 
 
   return (
-    <div className=" h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden sm:text-lg bg-slate-900  font-nunito    text-slate-300 sm:flex">
+    <div className=" h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden sm:text-lg bg-slate-900  font-nunito    text-slate-200 sm:flex">
 
       <div className="cursor-gradient"></div>
 
-      <header className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-10 "> <Home /> </header>
+      <header ref={headerRef} className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-10 "> <Home /> </header>
 
       <div ref={scrollContainerRef} className="sm:flex-auto w-full scrollable overflow-auto sm:w-1/2 mb-10 sm:m-0 p-4 sm:p-10">
 

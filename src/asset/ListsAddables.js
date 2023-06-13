@@ -32,3 +32,11 @@ export const projectsArray = [
   
   ];
   
+export  const skills = [
+    "Python",
+    "C++",
+    "HTML/CSS",
+    "TailwindCSS",
+    "JavaScript",
+    "ReactJS",
+]

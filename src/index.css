@@ -19,3 +19,9 @@
     color: aqua;
     mix-blend-mode: screen;
   }
+  
+@layer utilities{
+.homebar-icon {
+  @apply duration-300 m-2 flex flex-1 flex-col items-center;
+}
+}

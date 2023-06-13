@@ -3,11 +3,8 @@ import React, { useEffect, useRef, useContext } from 'react'
 import RefContext from '../context/RefContext';
 
 
-
-
 const courses = [
-    "Data Structures and Alogirthms", "Operating Systems", "Computer Organisation", "Information and Database Systems", "Data Science I - Statistics", "Data Science II - Probablity", "Data Science III - Machine Learning", "Statistical Learning", "Data Handling and Visualization", "Special Topics in Deep Neural Networks",
-];
+    "Data Structures and Alogirthms",  "Operating Systems", "Computer Organisation", "Information and Database Systems", "Data Science I - Statistics", "Data Science II - Probablity", "Data Science III - Machine Learning", "Statistical Learning", "Data Handling and Visualization", "Special Topics in Deep Neural Networks","Computer Graphics and Game Design" ,];
 
 function Education() {
 
@@ -15,6 +12,7 @@ function Education() {
     const listRef = useRef([]);
     const sectionRef = useRef();
 
+    
     useEffect(() => {
 
         const observerOptions = {
@@ -28,7 +26,7 @@ function Education() {
                 if (entry.isIntersecting) {
                     gsap.fromTo(listRef.current,
                         { opacity: 0, x: 30, },
-                        { x: 0, opacity: 1, stagger: 0.12, ease: "elastic.out(1,0.5)", duration: 0.5, }
+                        { x: 0, opacity: 1, stagger: 0.08, ease: "elastic.out(1,0.5)", duration: 0.5, }
                     );
                 }
             });
