@@ -36,10 +36,10 @@ function Home() {
             <button className='hover:text-teal-500' onClick={() => scrollToSection(educationRef)}>EDUCATION</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(projectRef)}>PROJECTS</button>
+            <button onClick={() => scrollToSection(projectRef)}  className='hover:text-teal-500'>PROJECTS</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(contactRef)}>CONTACT ME</button>
+            <button onClick={() => scrollToSection(contactRef)}  className='hover:text-teal-500'>CONTACT ME</button>
           </li>
 
         </ul>

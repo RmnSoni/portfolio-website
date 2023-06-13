@@ -50,7 +50,7 @@ export default function Projects() {
       <h2 className='text-2xl group-hover/section:text-teal-500'>Projects</h2>
       {projectsArray.map((projectelement, index) => (
 
-        <div key={index} ref={el => (listRef.current[index] = el)} className=' group opacity-0 m-1 p-1 hover:border-slate-700 border rounded-xl border-slate-900 '>
+        <div key={index} ref={el => (listRef.current[index] = el)} className=' group opacity-0 mx-1 my-2 p-1 hover:border-slate-700 border rounded-xl border-slate-900 '>
 
           <h3 className="text-xl group-hover:font-semibold  text-teal-500" > {projectelement.title}  </h3>
 
@@ -59,9 +59,7 @@ export default function Projects() {
             <div>
               <p>{projectelement.description}</p>
               <p>{projectelement.description2}</p>
-              <ul>{projectelement.technologies.map((item, index2) => <span key={index2} className="m-1 inline-block 
-          transition duration-500
-           group-hover:translate-x-1 hover:bg-slate-700 border-teal-700 border-2 rounded-full p-1 hover:text-teal-400" >{item}</span>)}</ul>
+              <ul>{projectelement.technologies.map((item, index2) => <span key={index2} className="m-1 inline-block transition duration-500 group-hover:translate-x-1 hover:bg-slate-700 border-teal-700 border-2 rounded-full p-1 hover:text-teal-400" >{item}</span>)}</ul>
             </div>
 
             <div className='text-center opacity-0 flex-col flex  group-hover:opacity-100 transition duration-500 '>

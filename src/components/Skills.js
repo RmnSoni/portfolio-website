@@ -18,11 +18,6 @@ function Skills() {
     const listRef = useRef([]);
 
 
-
-
-
-
-
     useEffect(() => {
 
         const observerOptions = {
