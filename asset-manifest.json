@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.30e2d289.css",
-    "main.js": "/static/js/main.be9144ec.js",
+    "main.js": "/static/js/main.6b035bcd.js",
     "static/media/RamanSoni_resumesde.pdf": "/static/media/RamanSoni_resumesde.11f9aa521b3f136cdb34.pdf",
     "index.html": "/index.html",
     "main.30e2d289.css.map": "/static/css/main.30e2d289.css.map",
-    "main.be9144ec.js.map": "/static/js/main.be9144ec.js.map"
+    "main.6b035bcd.js.map": "/static/js/main.6b035bcd.js.map"
   },
   "entrypoints": [
     "static/css/main.30e2d289.css",
-    "static/js/main.be9144ec.js"
+    "static/js/main.6b035bcd.js"
   ]
 }
