@@ -16,12 +16,16 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    color: aqua;
-    mix-blend-mode: screen;
+    
   }
   
 @layer utilities{
 .homebar-icon {
-  @apply duration-300 m-2 flex flex-1 flex-col items-center;
+  @apply duration-300 m-2 flex  flex-col items-center;
 }
+
+.project-buttons{
+  @apply  transition duration-500 group-hover:-translate-x-1 m-1 p-1 rounded-full font-semibold text-slate-400  border-teal-700 border-2 bg-opacity-5 hover:bg-teal-600 hover:text-slate-800 hover:border-slate-700 ;
+}
+
 }

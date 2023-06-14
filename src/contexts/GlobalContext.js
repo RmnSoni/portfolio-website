@@ -1,5 +1,5 @@
 
-import React, { createContext, useRef } from 'react';
+import React, { createContext, useRef, useState } from 'react';
 
 const RefContext = createContext(null);
 
@@ -10,8 +10,7 @@ export const UserRefProvider = ({ children }) => {
     const contactRef = useRef(null);
     const projectRef = useRef(null);
     const aboutRef = useRef(null);
-
-    
+    const [isDarkMode, setIsDarkMode] = useState(false);
   
 
     return (
@@ -23,6 +22,8 @@ export const UserRefProvider = ({ children }) => {
                 skillsRef,
                 contactRef,
                 projectRef,
+                isDarkMode,
+                setIsDarkMode,
             }}>
             {children}
         </RefContext.Provider>

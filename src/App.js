@@ -9,7 +9,8 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaArrowCircleUp } from "react-icons/fa";
-import RefContext from "./context/RefContext";
+import RefContext from "./contexts/GlobalContext";
+import MouseGradient from "./components/MouseGradient";
 
 
 
@@ -18,10 +19,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function App() {
-  const { aboutRef } = useContext(RefContext)
+
+  const { aboutRef, isDarkMode } = useContext(RefContext)
   const scrollContainerRef = useRef(null);
   const headerRef = useRef(null);
   const [showButton, setShowButton] = useState(false);
+
+
+
+  //Scroll To Top Logic---------------------------------------------
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -47,7 +53,9 @@ function App() {
       scrollContainer.removeEventListener('scroll', handleScroll);
     };
   }, []);
+//--------------------------------------------------------------------
 
+//Whole site Animation-------------------------------------------------
   useEffect(()=>{
 
     const header=headerRef.current;
@@ -69,36 +77,12 @@ function App() {
 
   },[]);
 
-
-  // const handleScrollToTop = () => {
-  //   scrollContainerRef.current.scrollTo({
-  //     top: 0,
-  //     behavior: 'smooth',
-  //   });
-  // };
-
-  // hover effect
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      const cursor = document.querySelector('.cursor-gradient');
-      const x = event.clientX;
-      const y = event.clientY;
-      cursor.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(45,212,192,0.15), rgba(0, 0, 0, 0) 50% )`;
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
+  //-----------------------------------------
 
   return (
-    <div className=" h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden sm:text-lg bg-slate-900  font-nunito    text-slate-200 sm:flex">
+    <div className={` h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden sm:text-lg font-inter ${ isDarkMode ? 'bg-slate-900 text-slate-200' :'bg-slate-300 text-slate-900' } sm:flex ` }>
 
-      <div className="cursor-gradient"></div>
-
+     <MouseGradient />
       <header ref={headerRef} className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-10 "> <Home /> </header>
 
       <div ref={scrollContainerRef} className="sm:flex-auto w-full scrollable overflow-auto sm:w-1/2 mb-10 sm:m-0 p-4 sm:p-10">
