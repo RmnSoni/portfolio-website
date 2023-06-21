@@ -83,9 +83,9 @@ function App() {
     <div className={` h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden sm:text-lg font-inter ${ isDarkMode ? 'bg-slate-900 text-slate-200' :'bg-slate-300 text-slate-900' } sm:flex ` }>
 
      <MouseGradient />
-      <header ref={headerRef} className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-10 "> <Home /> </header>
+      <header ref={headerRef} className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-20 "> <Home /> </header>
 
-      <div ref={scrollContainerRef} className="sm:flex-auto w-full scrollable overflow-auto sm:w-1/2 mb-10 sm:m-0 p-4 sm:p-10">
+      <div ref={scrollContainerRef} className="sm:flex-auto w-full scrollable overflow-auto sm:w-1/2 mb-10 sm:m-0 p-4 sm:p-20">
 
         <main>
           <About />
