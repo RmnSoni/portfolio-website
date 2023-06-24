@@ -1,8 +1,5 @@
-
 import React, { useContext } from 'react'
 import RefContext from '../contexts/GlobalContext'
-
-
 
 export default function Work() {
 const { workRef, isDarkMode } = useContext(RefContext)

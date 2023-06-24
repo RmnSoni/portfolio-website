@@ -10,7 +10,9 @@ useEffect(() => {
       const cursor = document.querySelector('.cursor-gradient');
       const x = event.clientX;
       const y = event.clientY;
-      cursor.style.background = `radial-gradient(circle at ${x}px ${y}px, ${ isDarkMode? 'rgba(45,212,192,0.15)': ' rgba(100, 180, 200 ,0.35)'}, rgba(0, 0, 0, 0) ${isDarkMode ? '50%': '70%'} )`;
+      cursor.style.background = `radial-gradient(circle at ${x}px ${y}px, 
+        ${ isDarkMode? 'rgba(45,212,192,0.15)': ' rgba(100, 180, 200 ,0.35)'}, rgba(0, 0, 0, 0) 
+        50% )`;
     };
 
     document.addEventListener('mousemove', handleMouseMove);

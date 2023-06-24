@@ -28,12 +28,9 @@ function App() {
 
 
   //Scroll To Top Logic---------------------------------------------
-
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
-
-
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current; // Create a local variable to hold the current ref value
 
@@ -76,16 +73,15 @@ function App() {
         });
 
   },[]);
-
   //-----------------------------------------
 
   return (
-    <div className={` h-screen w-screen fixed scrollable  overflow-auto sm:overflow-hidden sm:text-lg font-inter ${ isDarkMode ? 'bg-slate-900 text-slate-200' :'bg-slate-300 text-slate-900' } sm:flex ` }>
+    <div className={` h-screen w-screen fixed scrollable  overflow-auto md:overflow-hidden md:text-lg font-inter ${ isDarkMode ? 'bg-slate-900 text-slate-200' :'bg-slate-300 text-slate-900' } sm:flex ` }>
 
      <MouseGradient />
-      <header ref={headerRef} className=" sm:flex-none flex justify-center items-center w-full sm:w-2/5 p-4 sm:p-20 "> <Home /> </header>
+      <header ref={headerRef} className=" md:flex-none flex justify-center items-center w-full md:w-2/5 p-4 md:p-20 "> <Home /> </header>
 
-      <div ref={scrollContainerRef} className="sm:flex-auto w-full scrollable overflow-auto sm:w-1/2 mb-10 sm:m-0 p-4 sm:p-20">
+      <div ref={scrollContainerRef} className="md:flex-auto w-full scrollable overflow-auto md:w-1/2 mb-10 md:m-0 p-4 md:p-20">
 
         <main>
           <About />
@@ -93,10 +89,11 @@ function App() {
           <Skills />
           <Education />
           <Projects />
+          <Contact />
         </main>
 
         <footer>
-          <Contact />
+          
           <div className="text-sm group text-slate-500">
             This website's is hosted on <span className="group-hover:text-teal-500">GitHub Pages</span>, made in <span className="group-hover:text-teal-500">Visual Studio Code</span> using <span className="group-hover:text-teal-500"> ReactJS</span>, <span className="group-hover:text-teal-500">TailwindCSS</span> and <span className="group-hover:text-teal-500">GSAP</span> .
           </div>

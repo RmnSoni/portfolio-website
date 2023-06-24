@@ -22,7 +22,6 @@ function Skills() {
             entries.forEach((entry) => {
 
                 if (entry.isIntersecting) {
-                    console.log("hila")
                     gsap.fromTo(listRef1.current,
                         { x: 10, opacity: 0, },
                         { x: 0, opacity: 1, stagger: 0.1, ease: "elastic.out(1,0.5)", duration: 0.5, }

@@ -13,12 +13,9 @@ export default function DarkModeButton() {
     const toggleDarkMode = () => {
         const newMode = !isDarkMode;
         setIsDarkMode(newMode);
-        console.log("toggle pressed")
         localStorage.setItem('darkMode', newMode);
         document.documentElement.classList.toggle('dark', newMode);
     };
-
-
 
     return (
 
@@ -30,7 +27,6 @@ export default function DarkModeButton() {
              hover:text-teal-500     "
         >
             {isDarkMode ? < HiSun /> : < GiBatMask />}
-
         </button>
 
     )
