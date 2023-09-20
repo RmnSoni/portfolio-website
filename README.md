@@ -43,7 +43,7 @@ To run the project locally, follow these steps:
 
 ## Customization
 
-You can customize the content and styling of the portfolio website by modifying the relevant files in the project. Update the project details in the `src/data/projects.js` file and modify the styling using Tailwind CSS utility classes.
+You can customize the content and styling of the portfolio website by modifying the relevant files in the project. Update the project, skills or course details in the `src/asset/ListAddables.js` file and modify the styling using Tailwind CSS utility classes.
 
 ## Deployment
 
@@ -68,9 +68,9 @@ To deploy the website to production, you can use platforms like Netlify, Vercel,
 - [ ] Individual Project Item should have seperate animation.  
 - [ ] Make sidebar icons highligh when their corresponding content is on top.
 - [ ] Make a loading animation on start
-- [ ] Maybe light and dark mode toggle
-    - [ ] Decide a Theme
-    - [ ] Implementation
+- [x] Maybe light and dark mode toggle
+    - [x] Decide a Theme
+    - [x] Implementation
 
 
 

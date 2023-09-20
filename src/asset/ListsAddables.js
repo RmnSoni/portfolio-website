@@ -22,13 +22,22 @@ export const projectsArray = [
     },
   
     {
-      title: "Spotify Profile Insights",
-      description: "This tool provides users with in-depth analytics and insights into their listening habits, allowing them to explore and understand their music preferences. ",
-      description2: "It retrieves data from the Spotify API, then generates visualizations, analytics, and personalized recommendations to display trends, favorite artists, and the amount of time spent listening to music.",
-      technologies: ["ReactJS", "TailwindCSS", "NodeJs","Express"],
-      demolink: 'https://www.google.com',
-      githublink: "",
+      title: "Sharespeare",
+      description: "A social media platform for sharing quotes and poems with the world.",
+      description2: "A MERN stack application with features like liking post, commenting, sharing, connecting and messaging.",
+      technologies: ["ReactJS", "MaterialUI","Redux","MongoDB", "NodeJs","Express"],
+      demolink: 'https://sharespeare.vercel.app/',
+      githublink: "https://github.com/RmnSoni/social-media-app",
     },
+    {
+      title: "Blog Platform",
+      description: "A portfolio cum personal blog platform for a PhD. scholar, you can see his current usage at the demo.",
+      description2: "A firebase based app that can have editable portfolio content and generates blog from markdown files uploaded by the user. ",
+      technologies: ["ReactJS", "Tailwind","Firebase","Firestore"],
+      demolink: 'https://www.kushalsoni.in/',
+      githublink: "https://github.com/RmnSoni/blogapp",
+    },
+
   
   ];
   

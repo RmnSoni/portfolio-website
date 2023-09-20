@@ -1,6 +1,6 @@
 
 import React, { useContext } from 'react';
-import Resume from "../asset/RamanSoni_resumesde.pdf";
+import Resume from "../asset/RamanSoni_resume.pdf";
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiDocumentArrowDown } from 'react-icons/hi2';
 import RefContext from '../contexts/GlobalContext';
