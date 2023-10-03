@@ -7,7 +7,19 @@
   technologies: ["tech 1",'tech2' ,'tech3'],
   demolink:'',
   githublink:'',  
-} */
+} 
+
+Work Experience 
+  {
+    jobTitle: "Frontend Developer Intern",
+    company: "Dyord AItech Pvt. Ltd.",
+    companyLink: "",
+    dates: "",
+    description1: "",
+    description2: ""
+  },
+
+*/
 
 
 export const projectsArray = [
@@ -29,6 +41,7 @@ export const projectsArray = [
       demolink: 'https://sharespeare.vercel.app/',
       githublink: "https://github.com/RmnSoni/social-media-app",
     },
+
     {
       title: "Blog Platform",
       description: "A portfolio cum personal blog platform for a PhD. scholar, you can see his current usage at the demo.",
@@ -49,3 +62,26 @@ export  const skills = [
     "JavaScript",
     "ReactJS",
 ]
+
+export const workExperienceList = [
+
+  {
+    jobTitle: "Frontend Developer Intern",
+    company: "Dyord AItech Pvt. Ltd.",
+    companyLink: "",
+    dates: "Sept 2023 - Present",
+    description1: "Working for a pre-production project at a startup, specializing in ReactJS, Redux, and Tailwind CSS to create responsive and user-friendly web interfaces.",
+    description2: ""
+  },
+
+  {
+    jobTitle : "Management Trainee",
+    company : "ICICI Bank Ltd.",
+    companyLink : "https://www.icicibank.com/",
+    dates : "Aug 2022 - Dec 2022",
+    description1: "Initiated and managed the development and implementation of a digital visiting card solution for over 125,000 ICICI employees, significantly reducing reliance on printed cards. This involved coordination with teams of business analyst, developers, designers.",
+    description2 : "In my role as the application owner, I undertook the responsibility of ensuring the maintenance, scalability, new enhancements, and technical support for iSpace—an indispensable application relied upon by a vast user base of over 125,000 bank's employees on a daily basis."
+  }
+
+]
+

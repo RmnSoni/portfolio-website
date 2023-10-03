@@ -18,10 +18,34 @@
     z-index: -1;
     
   }
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
   
+  .wiggle {
+    animation: wiggle 0.5s ease-in-out 4;
+  }
+  .animate-emoji {
+    transition: transform 0.2s ease-in-out;
+  }
+
 @layer utilities{
 .homebar-icon {
-  @apply duration-300 m-2 flex  flex-col items-center;
+  @apply duration-300 mt-2 flex items-center;
 }
 
 .project-buttons{
