@@ -1,9 +1,8 @@
 import React from 'react'
-import {  FaBook, FaEnvelope, FaFileDownload, FaLinkedin } from 'react-icons/fa'
 import Resume from "../asset/RamanSoni_resume.pdf"
 import { useContext } from 'react'
 import RefContext from '../contexts/GlobalContext'
-import { AiFillInstagram } from 'react-icons/ai'
+import { PiBookOpenTextDuotone, PiEnvelopeOpenDuotone, PiFileArrowDownDuotone, PiInstagramLogoDuotone, PiLinkedinLogoDuotone } from 'react-icons/pi'
 
 export default function Contact() {
 
@@ -15,7 +14,7 @@ export default function Contact() {
 
       <p className='m-1 p-1 group' >
         <a rel="noreferrer" target='_blank' href='https://www.linkedin.com/in/rmnsoni/'>
-          <FaLinkedin 
+          <PiLinkedinLogoDuotone 
           className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`}  
           />
           Connect with me on my LinkedIn profile <span 
@@ -24,26 +23,26 @@ export default function Contact() {
 
       <p className='m-1 p-1 group' >
         <a rel="noreferrer" href='mailto:soni.raman.1602@gmail.com'  >
-          <FaEnvelope className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`}  />Email me at <span 
+          <PiEnvelopeOpenDuotone className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`}  />Email me at <span 
           className={`${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' } group-hover:font-semibold`} 
           >  soni.raman.1602@gmail.com</span>.</a> </p>
 
       <p className='m-1 p-1 group'>
         <a target='_blank' rel='noreferrer' href='https://www.instagram.com/i.aint.artist/' >
-          <AiFillInstagram className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`}  />Although <span 
+          <PiInstagramLogoDuotone className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`}  />Although <span 
           className={`${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' } group-hover:font-semibold`} 
           >@i.aint.arist</span>, you can see my art on instagram.</a></p>
 
 <p className='m-1 p-1 group' >
         <a rel="noreferrer" href={Resume} download='RamanSoniResume.pdf' >
-          <FaFileDownload className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`} />
+          <PiFileArrowDownDuotone className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`} />
           You can download <span 
           className={`${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' } group-hover:font-semibold`} 
           > my resume </span> by clicking here. </a></p>
           
           <p className='m-1 p-1 group' >
             <a target='-blank' rel="noreferrer" href="https://blog.ramansoni.in/" >
-              <FaBook className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`} />
+              <PiBookOpenTextDuotone className={`mx-1 inline ${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' }`} />
               See my journey of learning tech in<span 
               className={`${ isDarkMode ? 'group-hover:text-teal-500' : 'group-hover:text-teal-700' } group-hover:font-semibold`} 
               > my blogs</span>. </a></p>
