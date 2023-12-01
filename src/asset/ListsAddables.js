@@ -69,7 +69,7 @@ export const workExperienceList = [
     jobTitle: "Frontend Developer Intern",
     company: "Dyord AItech Pvt. Ltd.",
     companyLink: "",
-    dates: "Sept 2023 - Present",
+    dates: "Sept 2023 - Nov 2023",
     description1: "Working for a pre-production project at a startup, specializing in ReactJS, Redux, and Tailwind CSS to create responsive and user-friendly web interfaces.",
     description2: ""
   },
