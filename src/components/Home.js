@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import Resume from "../asset/RamanSoni_resume.pdf";
 
 import {
@@ -10,7 +10,6 @@ import {
 } from "react-icons/pi";
 import RefContext from "../contexts/GlobalContext";
 import DarkModeButton from "./DarkModeButton";
-import gsap from "gsap";
 
 function Home() {
   const {
