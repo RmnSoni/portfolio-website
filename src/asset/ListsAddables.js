@@ -65,11 +65,13 @@ export const projectsArray = [
 
 export const skills = [
   "Python",
-  "C++",
+  "C#",
+  "Swift",
   "HTML/CSS",
   "TailwindCSS",
   "JavaScript",
   "ReactJS",
+  "SwiftUI"
 ];
 
 export const workExperienceList = [
@@ -78,12 +80,12 @@ export const workExperienceList = [
     company: "Brane Enterprises Pvt. Ltd.",
     companyLink: "https://www.braneenterprises.com/",
     dates: "Jan 2024 - Present",
-    description1: "",
-    description2: "",
+    description1: "Working with API integration in a no code platform.",
+    description2: "Developed models for Ambulance management and credit risk analysis. ",
   },
 
   {
-    jobTitle: "Frontend Developer Intern",
+    jobTitle: "Frontend Developer",
     company: "Dyord AItech Pvt. Ltd.",
     companyLink: "https://dyord.com/",
     dates: "Sep 2023 - Nov 2023",
@@ -93,13 +95,13 @@ export const workExperienceList = [
   },
 
   {
-    jobTitle: "Management Trainee",
+    jobTitle: "Associate Software Developer",
     company: "ICICI Bank Ltd.",
     companyLink: "https://www.icicibank.com/",
     dates: "Aug 2022 - Dec 2022",
     description1:
-      "Initiated and managed the development and implementation of a digital visiting card solution for over 125,000 ICICI employees, significantly reducing reliance on printed cards. This involved coordination with teams of business analyst, developers, designers.",
+      "Created credit-risk analysis from 12 days to under 3 hours and developed a digital solution serving 125,000+ users, reducing printed card costs by 60%.",
     description2:
-      "In my role as the application owner, I undertook the responsibility of ensuring the maintenance, scalability, new enhancements, and technical support for iSpace—an indispensable application relied upon by a vast user base of over 125,000 bank's employees on a daily basis.",
+      "Revamped a workspace management system, adding a 'Book My Show'-style interface for easy cubicle and meeting room reservations. ",
   },
 ];
